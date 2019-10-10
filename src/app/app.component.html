@@ -1,4 +1,6 @@
 <h1>Projection Test</h1>
+<p>This was originally a question on stack overflow asking, basically, if a content projection can come from a child component instead of being supplied directly by the template.</p>
+<p>The answer is... kinda. You need to know what types of things will be rendered. Here is an example where name.component.ts actually supplies the names to the namesList.component.ts even though NamesListComponent is instantiated in AppComponent.</p>
 <app-names-list>
   <app-name *ngFor="let name of names" [name]="name"></app-name>
 </app-names-list>
